@@ -7,18 +7,21 @@ import { Avatar } from './Avatar'
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 
+interface Content{
+  typ: 'paragraph'|'link';
+  content: string 
+}
+
+interface Author{
+  AvatarUrl: string;
+  name: string;
+  role:string;
+  };
 
 interface PostProps{
-  author:{
-    AvatarUrl: string;
-    name: string;
-    role:string;
-  };
+  author: Author;
   publishedAt: Date;
-  content: [{
-    type: 'paragraph'|'link';
-    content: string
-  }];
+  content:Content[];
 }
 
 export function Post({ author, publishedAt, content }: PostProps) {
@@ -77,9 +80,9 @@ export function Post({ author, publishedAt, content }: PostProps) {
 
       <div className={styles.content}>
         {content.map(line => {
-          if (line.type == 'paragraph') {
+          if (line.typ == 'paragraph') {
             return <p key={line.content}>{line.content}</p>;
-          } else if (line.type == 'link') {
+          } else if (line.typ == 'link') {
             return <p key={line.content}><a href="#">{line.content}</a></p>;
           }
 
