@@ -5,8 +5,7 @@ import { Sidebar } from "./components/Sidebar"
 import styles from './App.module.css'
 
 import './global.css'
-
-Content: Sring;
+content:[];
 
 const posts = [
   {
