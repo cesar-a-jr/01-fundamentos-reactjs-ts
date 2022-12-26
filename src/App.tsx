@@ -1,59 +1,53 @@
-import Header from "./components/Hader";
-import { Post } from "./components/Post";
-import { Sidebar } from "./components/Sidebar";
+import { Header } from './components/Header';
+import { Post } from './components/Post'
+import { Sidebar } from './components/Sidebar';
 
 import styles from './App.module.css';
 
 import './global.css';
 
-
-
 const posts = [
   {
     id: 1,
     author: {
-      AvatarUrl: 'https://github.com/italomuniz16.png',
-      name: 'Italo Muniz',
-      role:'Web Desing'
+      avatarUrl: 'https://github.com/diego3g.png',
+      name: 'Diego Fernandes',
+      role: 'CTO @Rocketseat'
     },
     content: [
-      {type: 'paragraph', content: 'Fala galeraa 👋'},
-      {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
-      {type: 'link', content: 'jane.design/doctorcare'},
-      
+      { type: 'paragraph', content: 'Fala galera 👋' },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
+      { type: 'link', content: '#link1 #link2 #link3' },
     ],
-    publishedAt: new Date('2022-09-27 16:56:00')
+    publishedAt: new Date('2022-05-03 20:00:00'),
   },
   {
     id: 2,
     author: {
-      AvatarUrl: 'https://github.com/douglasmardegan.png',
-      name: 'Douglas',
-      role:'Web Desing'
+      avatarUrl: 'https://github.com/maykbrito.png',
+      name: 'Mayk Brito',
+      role: 'Educator @Rocketseat'
     },
     content: [
-      {typ: 'paragraph', content: 'Fala galeraa 👋'},
-      {typ: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
-      {typ: 'link', content: 'jane.design/doctorcare'},
-      
+      { type: 'paragraph', content: 'Fala galera 👋' },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
+      { type: 'link', content: '#link1 #link2 #link3' },
     ],
-    publishedAt: new Date('2022-09-27 20:00:00')
+    publishedAt: new Date('2022-05-10 20:00:00'),
   },
 ];
-
-
 
 export function App() {
   return (
     <div>
-      <Header/>
+      <Header />
 
       <div className={styles.wrapper}>
-        <Sidebar/>
+        <Sidebar />
         <main>
           {posts.map(post => {
-            return(
-              <Post 
+            return (
+              <Post
                 key={post.id}
                 author={post.author}
                 content={post.content}
@@ -63,8 +57,6 @@ export function App() {
           })}
         </main>
       </div>
-      
     </div>
   )
 }
-
