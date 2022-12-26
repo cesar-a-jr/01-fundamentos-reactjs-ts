@@ -7,7 +7,7 @@ import styles from './App.module.css'
 import './global.css'
 content:[];
 
-const posts = [
+const posts:  Post[] = [
   {
     id: 1,
     author: {
