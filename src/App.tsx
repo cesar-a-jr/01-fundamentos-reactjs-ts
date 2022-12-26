@@ -1,17 +1,14 @@
-import Header from "./components/Hader"
-import { Post } from "./components/Post"
-import { Sidebar } from "./components/Sidebar"
+import Header from "./components/Hader";
+import { Post } from "./components/Post";
+import { Sidebar } from "./components/Sidebar";
 
-import styles from './App.module.css'
+import styles from './App.module.css';
 
-import './global.css'
+import './global.css';
 
 
-interface Post extends PostProps {
-  id:number;
-}
 
-const posts: Post[] = [
+const posts = [
   {
     id: 1,
     author: {
