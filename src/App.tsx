@@ -6,9 +6,7 @@ import styles from './App.module.css'
 
 import './global.css'
 
-author: { Avatar_url: "", name: "", role: ""},
-publishedAt: Date,
-Content: Sring,
+Content: Sring;
 
 const posts = [
   {
