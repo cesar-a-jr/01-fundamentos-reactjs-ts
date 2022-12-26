@@ -6,7 +6,12 @@ import styles from './App.module.css'
 
 import './global.css'
 
-const posts:  Post[] = [
+
+interface Post extends PostProps {
+  id:number;
+}
+
+const posts: Post[] = [
   {
     id: 1,
     author: {
