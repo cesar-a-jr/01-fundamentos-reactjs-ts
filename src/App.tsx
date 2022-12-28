@@ -35,7 +35,7 @@ const posts = [
     },
     content: [
       {type: 'paragraph' as 'paragraph', content: 'Fala galeraa 👋'},
-      {type: 'paragraph' as 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
+      {type: 'paragraph' as 'paragraph', content: 'Acabdi de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
       {type: 'link' as 'link', content: 'jane.design/doctorcare'},
       
     ],
