@@ -8,9 +8,9 @@ import { Comment } from './Comment'
 import styles from './Post.module.css'
 
 interface Content{
-  typ: 'paragraph'|'link';
-  content: string 
-}
+  type: 'paragraph'|'link';
+  content: string;
+};
 
 interface Author{
   AvatarUrl: string;
@@ -80,9 +80,9 @@ export function Post({ author, publishedAt, content }: PostProps) {
 
       <div className={styles.content}>
         {content.map(line => {
-          if (line.typ == 'paragraph') {
+          if (line.type == 'paragraph') {
             return <p key={line.content}>{line.content}</p>;
-          } else if (line.typ == 'link') {
+          } else if (line.type == 'link') {
             return <p key={line.content}><a href="#">{line.content}</a></p>;
           }
 
